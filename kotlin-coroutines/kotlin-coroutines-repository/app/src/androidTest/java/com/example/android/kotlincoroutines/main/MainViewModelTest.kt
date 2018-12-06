@@ -38,14 +38,7 @@ class MainViewModelTest {
     @Test
     fun whenSuccessfulTitleLoad_itShowsAndHidesSpinner() {
         val call = FakeNetworkCall<String>()
-{
-        val subject = makeFailureCall(FakeNetworkException("the error"))
 
-        runBlocking {
-            subject
-        }
-
-    }
         val subject = MainViewModel(
                 TitleRepository(
                         MainNetworkFake(call),
